@@ -1,0 +1,251 @@
+{
+    "dimensions": {
+        "num_rows": 3000,
+        "num_columns": 12
+    },
+    "columns": [
+        "Filter_Cycle_ID",
+        "Sample_Index",
+        "TDS_ppm",
+        "Turbidity_NTU",
+        "Flow_Rate_L_min",
+        "Inlet_Pressure_bar",
+        "Outlet_Pressure_bar",
+        "Differential_Pressure_bar",
+        "Filter_Usage_days",
+        "Processed_Water_Litres",
+        "Filter_Condition",
+        "RUL_days"
+    ],
+    "column_dtypes": {
+        "Filter_Cycle_ID": "str",
+        "Sample_Index": "int64",
+        "TDS_ppm": "float64",
+        "Turbidity_NTU": "float64",
+        "Flow_Rate_L_min": "float64",
+        "Inlet_Pressure_bar": "float64",
+        "Outlet_Pressure_bar": "float64",
+        "Differential_Pressure_bar": "float64",
+        "Filter_Usage_days": "float64",
+        "Processed_Water_Litres": "float64",
+        "Filter_Condition": "str",
+        "RUL_days": "float64"
+    },
+    "missing_values": {
+        "Filter_Cycle_ID": 0,
+        "Sample_Index": 0,
+        "TDS_ppm": 0,
+        "Turbidity_NTU": 0,
+        "Flow_Rate_L_min": 0,
+        "Inlet_Pressure_bar": 0,
+        "Outlet_Pressure_bar": 0,
+        "Differential_Pressure_bar": 0,
+        "Filter_Usage_days": 0,
+        "Processed_Water_Litres": 0,
+        "Filter_Condition": 0,
+        "RUL_days": 0
+    },
+    "missing_percentages": {
+        "Filter_Cycle_ID": 0.0,
+        "Sample_Index": 0.0,
+        "TDS_ppm": 0.0,
+        "Turbidity_NTU": 0.0,
+        "Flow_Rate_L_min": 0.0,
+        "Inlet_Pressure_bar": 0.0,
+        "Outlet_Pressure_bar": 0.0,
+        "Differential_Pressure_bar": 0.0,
+        "Filter_Usage_days": 0.0,
+        "Processed_Water_Litres": 0.0,
+        "Filter_Condition": 0.0,
+        "RUL_days": 0.0
+    },
+    "duplicate_records": 0,
+    "filter_cycles": {
+        "num_unique_cycles": 30,
+        "unique_cycles_list": [
+            "FC001",
+            "FC002",
+            "FC003",
+            "FC004",
+            "FC005",
+            "FC006",
+            "FC007",
+            "FC008",
+            "FC009",
+            "FC010",
+            "FC011",
+            "FC012",
+            "FC013",
+            "FC014",
+            "FC015",
+            "FC016",
+            "FC017",
+            "FC018",
+            "FC019",
+            "FC020",
+            "FC021",
+            "FC022",
+            "FC023",
+            "FC024",
+            "FC025",
+            "FC026",
+            "FC027",
+            "FC028",
+            "FC029",
+            "FC030"
+        ],
+        "samples_per_cycle": {
+            "min": 100,
+            "max": 100,
+            "mean": 100.0
+        }
+    },
+    "classification_target_distribution": {
+        "counts": {
+            "Normal": 1777,
+            "Warning": 853,
+            "Clogged": 370
+        },
+        "percentages": {
+            "Normal": 59.23,
+            "Warning": 28.43,
+            "Clogged": 12.33
+        }
+    },
+    "rul_target_distribution": {
+        "count": 3000,
+        "mean": 103.58603000000001,
+        "std": 60.42177519386776,
+        "min": 0.0,
+        "p25": 52.364999999999995,
+        "median": 102.245,
+        "p75": 151.3725,
+        "max": 238.85,
+        "skewness": 0.13166936465217155,
+        "negative_values_count": 0,
+        "zero_values_count": 49
+    },
+    "selected_feature_statistics": {
+        "TDS_ppm": {
+            "mean": 318.0687,
+            "std": 119.92518938457553,
+            "min": 80.0,
+            "p25": 223.8375,
+            "median": 338.555,
+            "p75": 427.0475,
+            "max": 527.16,
+            "skewness": -0.35308352992860764
+        },
+        "Turbidity_NTU": {
+            "mean": 3.1123119999999997,
+            "std": 1.7286986869818552,
+            "min": 0.2,
+            "p25": 1.348,
+            "median": 3.521,
+            "p75": 4.604,
+            "max": 6.544,
+            "skewness": -0.13406318061470063
+        },
+        "Flow_Rate_L_min": {
+            "mean": 1.519837,
+            "std": 0.4533309211518198,
+            "min": 0.536,
+            "p25": 1.148,
+            "median": 1.5455,
+            "p75": 1.87725,
+            "max": 2.5,
+            "skewness": -0.04880981457803107
+        },
+        "Inlet_Pressure_bar": {
+            "mean": 2.063358,
+            "std": 0.24538365651015573,
+            "min": 1.59,
+            "p25": 1.828,
+            "median": 2.0715000000000003,
+            "p75": 2.305,
+            "max": 2.5,
+            "skewness": -0.1279394276742383
+        },
+        "Outlet_Pressure_bar": {
+            "mean": 1.4669783333333333,
+            "std": 0.4463615120023468,
+            "min": 0.216,
+            "p25": 1.158,
+            "median": 1.497,
+            "p75": 1.8,
+            "max": 2.34,
+            "skewness": -0.3058227902448917
+        },
+        "Differential_Pressure_bar": {
+            "mean": 0.5963883333333333,
+            "std": 0.37350726912683474,
+            "min": 0.08,
+            "p25": 0.26,
+            "median": 0.5235000000000001,
+            "p75": 0.89625,
+            "max": 1.502,
+            "skewness": 0.45369607938048456
+        },
+        "Filter_Usage_days": {
+            "mean": 101.44562666666667,
+            "std": 61.14069100285061,
+            "min": 0.0,
+            "p25": 49.3225,
+            "median": 99.69999999999999,
+            "p75": 150.09750000000003,
+            "max": 238.85,
+            "skewness": 0.15530468753744925
+        }
+    },
+    "pressure_integrity": {
+        "max_discrepancy_bar": 0.0010000000000003617,
+        "mean_discrepancy_bar": 0.0002500000000000764,
+        "strictly_consistent_within_0_01bar": true
+    },
+    "correlations_with_rul": {
+        "TDS_ppm": 0.07531971014111356,
+        "Turbidity_NTU": -0.17165712259935742,
+        "Flow_Rate_L_min": 0.9252547908650819,
+        "Inlet_Pressure_bar": 0.02942497397149309,
+        "Outlet_Pressure_bar": 0.8102866377041364,
+        "Differential_Pressure_bar": -0.9490231818556357,
+        "Filter_Usage_days": -0.9001155284633421
+    },
+    "feature_means_by_condition": {
+        "TDS_ppm": {
+            "Clogged": 300.7364864864865,
+            "Normal": 331.3791952729319,
+            "Warning": 297.857878077374
+        },
+        "Turbidity_NTU": {
+            "Clogged": 4.023243243243243,
+            "Normal": 2.9055537422622395,
+            "Warning": 3.147909730363423
+        },
+        "Flow_Rate_L_min": {
+            "Clogged": 0.814327027027027,
+            "Normal": 1.8277974113674733,
+            "Warning": 1.1843071512309498
+        },
+        "Inlet_Pressure_bar": {
+            "Clogged": 2.0605621621621624,
+            "Normal": 2.06246539110861,
+            "Warning": 2.0664302461899178
+        },
+        "Outlet_Pressure_bar": {
+            "Clogged": 0.8134783783783784,
+            "Normal": 1.7350720315137873,
+            "Warning": 1.1919402110199298
+        },
+        "Differential_Pressure_bar": {
+            "Clogged": 1.2471243243243242,
+            "Normal": 0.32739448508722563,
+            "Warning": 0.8745005861664712
+        },
+        "Filter_Usage_days": {
+            "Clogged": 190.0984054054054,
+            "Normal": 59.7323860438942,
+            "Warning": 149.88982415005862
+        }
+    }
+}

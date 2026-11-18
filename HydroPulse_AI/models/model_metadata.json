@@ -1,0 +1,109 @@
+{
+    "project_name": "HydroPulse AI - Intelligent Water Filter Monitoring",
+    "version": "1.0.0",
+    "feature_order": [
+        "TDS_ppm",
+        "Turbidity_NTU",
+        "Flow_Rate_L_min",
+        "Inlet_Pressure_bar",
+        "Outlet_Pressure_bar",
+        "Differential_Pressure_bar",
+        "Filter_Usage_days"
+    ],
+    "classification": {
+        "model_type": "RandomForestClassifier",
+        "target": "Filter_Condition",
+        "classes": {
+            "0": "Normal",
+            "1": "Warning",
+            "2": "Clogged"
+        },
+        "best_hyperparameters": {
+            "class_weight": null,
+            "max_depth": 10,
+            "min_samples_split": 5,
+            "n_estimators": 100
+        },
+        "validation_metrics": {
+            "accuracy_mean": 0.9713333333333333,
+            "accuracy_std": 0.000666666666666682,
+            "macro_f1_mean": 0.9617926737903282,
+            "macro_f1_std": 0.002106627510602423,
+            "weighted_f1_mean": 0.9713624084697587,
+            "weighted_f1_std": 0.0006428229981169665,
+            "warning_f1_mean": 0.9497079490242882,
+            "warning_f1_std": 0.0019418686791397063,
+            "clogged_f1_mean": 0.9497595634019336,
+            "clogged_f1_std": 0.00837132251767703
+        },
+        "out_of_fold_metrics": {
+            "accuracy": 0.9713333333333334,
+            "macro_f1": 0.9623004534310184,
+            "weighted_f1": 0.97135791714423,
+            "per_class": {
+                "Normal": {
+                    "precision": 0.9870276367738297,
+                    "recall": 0.9848058525604952,
+                    "f1_score": 0.9859154929577465
+                },
+                "Warning": {
+                    "precision": 0.9464493597206054,
+                    "recall": 0.9531066822977726,
+                    "f1_score": 0.9497663551401869
+                },
+                "Clogged": {
+                    "precision": 0.9538043478260869,
+                    "recall": 0.9486486486486486,
+                    "f1_score": 0.9512195121951219
+                }
+            }
+        }
+    },
+    "regression": {
+        "model_type": "GradientBoostingRegressor",
+        "target": "RUL_days",
+        "best_hyperparameters": {
+            "learning_rate": 0.05,
+            "max_depth": 5,
+            "min_samples_split": 2,
+            "n_estimators": 100
+        },
+        "validation_metrics": {
+            "mae_mean": 13.130548084820287,
+            "mae_std": 2.0249139240154754,
+            "rmse_mean": 18.294088734958265,
+            "rmse_std": 2.5718314324907268,
+            "r2_mean": 0.9053724252157132,
+            "r2_std": 0.025567346893770323,
+            "medae_mean": 8.181478936405371,
+            "medae_std": 1.6389306264827337,
+            "mean_bias": 1.6592613521325958
+        },
+        "out_of_fold_metrics": {
+            "mae": 13.13054808482029,
+            "rmse": 18.473981692089936,
+            "r2_score": 0.9064855238584323,
+            "median_absolute_error": 7.897036430265452,
+            "rul_range_error_analysis": {
+                "Critical_0_to_30_days": {
+                    "count": 410,
+                    "mae": 3.2301720640813967,
+                    "rmse": 4.034284675499339,
+                    "mean_bias": 1.606252359502537
+                },
+                "Warning_30_to_90_days": {
+                    "count": 902,
+                    "mae": 6.887027676744444,
+                    "rmse": 9.39734389779781,
+                    "mean_bias": 3.13754462660508
+                },
+                "Healthy_above_90_days": {
+                    "count": 1688,
+                    "mae": 18.87154901881754,
+                    "rmse": 23.567179586331264,
+                    "mean_bias": 0.8822010283198837
+                }
+            }
+        }
+    }
+}
